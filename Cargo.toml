@@ -1,0 +1,20 @@
+[package]
+name = "inky-el133"
+version = "0.1.0"
+edition = "2024"
+description = "Barebones driver for the 13.3\" Inky Impression e-ink display (EL133UF1)"
+license = "MIT"
+
+[dependencies]
+thiserror = "2.0"
+
+[target.'cfg(target_os = "linux")'.dependencies]
+gpio-cdev = "0.6"
+spidev = "0.5"
+
+[dev-dependencies]
+axum = "0.7"
+clap = { version = "4", features = ["derive"] }
+image = "0.25"
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "rustls-tls"] }
+tokio = { version = "1", features = ["full"] }

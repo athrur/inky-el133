@@ -1,0 +1,28 @@
+# Rust
+/target/
+Cargo.lock
+
+# Reference Python implementation
+/inky
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+
+# Backup files
+*.bak
+
+# Nix
+.direnv/
+result
+result-*
+.envrc.local
+
+# Local justfile with deployment config
+justfile
